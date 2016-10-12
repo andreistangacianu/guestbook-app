@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    each thread in threads
+        #thread
+        div #{thread._id}
+        each message in thread.messages
+            #message
+                div #{message.content}
+
+    p NEW MESSAGES
+        div#content
